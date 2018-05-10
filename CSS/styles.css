@@ -4,33 +4,262 @@
   box-sizing: border-box;
 }
 
+
+body {
+  height: 800px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #5D6063;
+}
+
+a:link,
+a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #73C055;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  height: 100px;
+  width: 100%;
+  padding: 20px 0;
+  background: #000;
+
+/*  border: 10px solid blue; */
+}
+
+
+.logo{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  /*border: 1px solid red;*/
+
+
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /*border: 1px solid red;*/
+}
+
+.menu > li {
+  display: inline;
+  margin-right: 70px;
+  /*border: 10px solid blue;*/
+
+}
+
+.menu li:last-of-type {
+  margin-right: 120px;
+}
+
+
+
+
+
+
+
 .logo img {
   width: 40%;
   display: block;
+/*  border: 10px solid purple; */
 }
 
 .page {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.header {
-  height: 100px;
-  padding: 20px 0;
-  position: absolute!important;
+
+
+
+
+.article-containter{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  width: 100%;
+  /*margin: auto;*/
+  line-height: 1.5;
+  /*border: 10px solid red;*/
 }
 
-.article{
-  width: 300px;
-  /*margin-top: 200px;*/
+
+.article-title {
+  padding: 50px 0px 20px 0px;
+  text-align: left;
+
 }
+
+.summary {
+  padding: 20px 0px 20px 0px;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.authored {
+  align-self: flex-end;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: right;
+  /*border: 10px solid purple;*/
+  margin-left: auto;
+
+}
+
+.authored p {
+  flex-direction: row;
+  align-self: flex-end;
+  /*border: 10px solid blue;*/
+  width:100%;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.article-containter a {
+  color: #73C055;
+}
+
+.article-paragraph {
+  padding: 20px 0px 20px 0px;
+  text-align: justify;
+
+}
+
+.article-subtitle {
+  padding: 20px 0px 20px 0px;
+  text-align: justify;
+}
+
+.article-image-med {
+  /*border: 10px solid red;*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+
+}
+
+.article-image-med img {
+  align-self: center;
+  /*border: 10px solid blue;*/
+  width: 60%;
+}
+
+.article-image-caption {
+  /*border: 10px solid red;*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.article-image-caption p {
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: right;
+  align-self: center;
+  width: 60%;
+  padding: 5px;
+
+}
+
+
+.footer {
+  position: relative;
+  bottom: -120px;
+  background: #000;
+  padding: 0.5em 0.5em;
+  font-size: 1.5em;
+}
+
+.footer p {
+  font-size: 0.5em;
+  color: white;
+  font-family: "Helvetica", "Arial", sans-serif;
+  text-align: left;
+  position: absolute;
+  width: 50.5em;
+  padding: 1em 2em;
+}
+
+.direccion {
+  text-decoration: underline white;
+  color: white;
+}
+
+.direccion:hover {
+  color: #73C055;
+}
+
+
+.social-icons {
+  list-style: none;
+  object-position: right-bottom;
+  padding-left: 80%;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* Hover effect */
+.fa:hover {
+    color: #73C055;
+}
+
+.fa:active {
+    color: #E2871C;
+}
+
+/* Facebook */
+.fa-facebook {
+    /*background: #3B5998;*/
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  /*  background: #55ACEE;*/
+    color: white;
+}
+
+/* GitHub */
+.fa-github {
+  /*  background: #55ACEE;*/
+    color: white;
+}
+
+
+
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   body {
     background-color: #F09A9D; /* Red */
   }
   .logo img {
-    width: 70%;
+    width: 40%;
     display: block;
   }
 }
@@ -39,11 +268,11 @@
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body {
     background-color: #F5CF8E; /* Yellow */
-    width: 50%;
+    /*width: 50%;*/
   }
 
   .logo img {
-    width: 70%;
+    width: 40%;
     display: block;
   }
 }
@@ -58,5 +287,6 @@
   .page{
       width: 960px;
       margin: 0 auto;
+      /*border: 10px solid red;*/
   }
 }
