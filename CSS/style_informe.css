@@ -1,0 +1,91 @@
+.article-containter{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  width: 100%;
+  /*margin: auto;*/
+  line-height: 1.5;
+  /*border: 10px solid red;*/
+}
+
+
+.article-title {
+  padding: 50px 0px 20px 0px;
+  text-align: left;
+
+}
+
+.summary {
+  padding: 20px 0px 20px 0px;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.authored {
+  align-self: flex-end;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: right;
+  /*border: 10px solid purple;*/
+  margin-left: auto;
+
+}
+
+.authored p {
+  flex-direction: row;
+  align-self: flex-end;
+  /*border: 10px solid blue;*/
+  width:100%;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.article-containter a {
+  color: #73C055;
+}
+
+.article-paragraph {
+  padding: 20px 0px 20px 0px;
+  text-align: justify;
+
+}
+
+.article-subtitle {
+  padding: 20px 0px 20px 0px;
+  text-align: justify;
+}
+
+.article-image-med {
+  /*border: 10px solid red;*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+
+}
+
+.article-image-med img {
+  align-self: center;
+  /*border: 10px solid blue;*/
+  width: 60%;
+}
+
+.article-image-caption {
+  /*border: 10px solid red;*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.article-image-caption p {
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: right;
+  align-self: center;
+  width: 60%;
+  padding: 5px;
+
+}
