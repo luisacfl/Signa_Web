@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang='es-419'>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <title>Signa_Lab - Tercer #DebateINE a la Presidencia</title>
+    <!--   <link href='CSS/menu.css' rel='stylesheet'/> -->
+    <link href='../CSS/style_informe.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link href="images/signa_identity/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- <link href="https://iteso.mx/lfportal-publico-theme/images/favicon.ico" rel="Shortcut Icon"> -->
+
+
+
+    <!-- sharing meta -->
+      <!-- For Google -->
+      <meta name="description" content="El 31 de mayo de 2018, el Instituto Nacional Electoral (INE), lanzó una convocatoria para participar con preguntas, formuladas a los 4 candidatos a la Presidencia de la República, a través de Twitter y Facebook. El INE invitó al ITESO a colaborar en el registro, categorización y análisis de las preguntas ciudadanas, trabajo realizado por Signa_Lab ITESO, (Laboratorio de Innovación Tecnológica y de Estudios Interdisciplinarios Aplicados), en donde se realizan actividades de minería, procesamiento, visualización y análisis de datos."/>
+      <meta name="keywords" content="" />
+
+      <meta name="author" content="Signa_Lab" />
+      <meta name="copyright" content="CC" />
+      <meta name="application-name" content="" />
+
+      <!-- For Facebook -->
+      <meta property="og:title" content="Signa_Lab - Tercer #DebateINE a la Presidencia" />
+      <meta property="og:type" content="article" />
+      <meta property="og:image" content="http://signalab.iteso.mx/images/signa_identity/signa_share_pvw.png" />
+      <meta property="og:url" content="http://signalab.iteso.mx/informes/informe_3erdebateine.html" />
+      <meta property="og:description" content="El 31 de mayo de 2018, el Instituto Nacional Electoral (INE), lanzó una convocatoria para participar con preguntas, formuladas a los 4 candidatos a la Presidencia de la República, a través de Twitter y Facebook. El INE invitó al ITESO a colaborar en el registro, categorización y análisis de las preguntas ciudadanas, trabajo realizado por Signa_Lab ITESO, (Laboratorio de Innovación Tecnológica y de Estudios Interdisciplinarios Aplicados), en donde se realizan actividades de minería, procesamiento, visualización y análisis de datos." />
+      <meta property="og:image:secure_url" content="https://signalab.iteso.mx/images/signa_identity/signa_share_pvw.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="750" />
+      <meta property="og:image:height" content="750" />
+
+      <!-- For Twitter -->
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Signa_Lab - Tercer #DebateINE a la Presidencia" />
+      <meta name="twitter:description" content="El 31 de mayo de 2018, el Instituto Nacional Electoral (INE), lanzó una convocatoria para participar con preguntas, formuladas a los 4 candidatos a la Presidencia de la República, a través de Twitter y Facebook. El INE invitó al ITESO a colaborar en el registro, categorización y análisis de las preguntas ciudadanas, trabajo realizado por Signa_Lab ITESO, (Laboratorio de Innovación Tecnológica y de Estudios Interdisciplinarios Aplicados), en donde se realizan actividades de minería, procesamiento, visualización y análisis de datos." />
+      <meta name="twitter:image" content="http://signalab.iteso.mx/images/signa_identity/signa_share_pvw.png" />
+
+
+
+
+
+
+    <!-- folium meta -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style> #map {position:absolute;top:0;bottom:0;right:0;left:0;} </style>
+    <style> #map_f0de59b20e324688b3c1029cd34198b9 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+    </style>
+
+    <link href='../CSS/style_informe.css' rel='stylesheet'/>
+
+    <!-- more folium meta -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"
+
+
+
+
+
+
+
+
+
+  </head>
+
+
+
+  <body>
+    <div id="container">
+
+      <header class='inital_page'>
+        <div class='header'>
+          <div class='logo'><img src='../images/signa_identity/logo_signa_iteso_60.png'/></div>
+          <ul class='menu'>
+            <!--
+            <li><a href='#'>Inicio</a></li>
+            <li><a href='#'>Conócenos</a></li>
+
+          -->
+          </ul>
+        </div>
+      </header>
+
+      <article class=page>
+
+        <header class='article-containter'>
+
+               <div class='article-title'>
+                 <h1>TERCER #DEBATEINE A LA PRESIDENCIA</h2>
+               </div>
+
+               <div class='summary'>
+                 <p>El 31 de mayo de 2018, el Instituto Nacional Electoral (INE), lanzó una convocatoria para participar con preguntas, formuladas a los 4 candidatos a la Presidencia de la República, a través de Twitter y Facebook. El INE invitó al ITESO a colaborar en el registro, categorización y análisis de las preguntas ciudadanas, trabajo realizado por Signa_Lab ITESO, (Laboratorio de Innovación Tecnológica y de Estudios Interdisciplinarios Aplicados), en donde se realizan actividades de minería, procesamiento, visualización y análisis de datos.</p>
+               </div>
+
+               <div class='article-about'>
+
+                 <div class='article-share'>
+
+                   <!-- Load Facebook SDK for JavaScript -->
+                   <div id="fb-root"></div>
+                   <script>(function(d, s, id) {
+                     var js, fjs = d.getElementsByTagName(s)[0];
+                     if (d.getElementById(id)) return;
+                     js = d.createElement(s); js.id = id;
+                     js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
+                     fjs.parentNode.insertBefore(js, fjs);
+                   }(document, 'script', 'facebook-jssdk'));</script>
+
+                  <!-- twitter sdk -->
+                  <script>window.twttr = (function(d, s, id) {
+                   var js, fjs = d.getElementsByTagName(s)[0],
+                     t = window.twttr || {};
+                   if (d.getElementById(id)) return t;
+                   js = d.createElement(s);
+                   js.id = id;
+                   js.src = "https://platform.twitter.com/widgets.js";
+                   fjs.parentNode.insertBefore(js, fjs);
+
+                   t._e = [];
+                   t.ready = function(f) {
+                     t._e.push(f);
+                   };
+                     return t;
+                   }(document, "script", "twitter-wjs"));</script>
+
+
+                   <nav class='sharing-icons'>
+                     <p class="fa fa-share-alt" id='share-icon'></p>
+                     <a class="fa fa-facebook" class="fb-share-button" data-href="https://signalab.iteso.mx/informes/informe_3erdebateine.html" data-layout="button" data-size="small" data-mobile-iframe="true" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsignalab.iteso.mx%2Finformes%2Finforme_3erdebateine.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a>
+                     <a href="https://twitter.com/intent/tweet?url=https://signalab.iteso.mx/informes/informe_3erdebateine.html&via=signa_lab" class="fa fa-twitter" class="twitter-share-button"></a>
+                     <a href="mailto:someone@yoursite.com" class="fa fa-inbox"></a>
+
+                   </nav>
+                 </div>
+
+                 <div class='authored'>
+                   <p> por <a href='https://twitter.com/Signa_Lab'>Signa_Lab</a> </p>
+                   <p>publicado el <time datetime='2018-07-11'> 11 de julio 2018 </time></p>
+                 </div>
+
+               </div>
+
+               <div class='section-divider'>
+               </div>
+
+             </header>
+
+         <div class='article-containter'>
+            <section>
+                 <div class='article-image-med'>
+                  <img src='../informes/informes-images/images-3erdebateine/3derdebateine_foto-debate_02-1080.png' />
+                 </div>
+                 <div class='article-image-caption'>
+                   <p>Fuente: INE.</p>
+                 </div>
+
+                 <div class='article-index-container'>
+
+                   <nav>
+                     <ol class='article-index'> Ir a la sección
+                       <li> <a href='informe_3erdebateine_01.html#section-1'>Treemap Temas #DebateINE </a></li>
+                       <li> <a href="informe_3erdebateine_01.html#section-2">Grafos sobre la conversación #DebateINE en Twitter</a></li>
+                       <li> <a href="informe_3erdebateine_01.html#section-3">Visualizaciones interactivas de Tweets por Temas #DebateINE </a></li>
+                       <li> <a href="informe_3erdebateine_01.html#section-4">Visualizaciones interactivas de comentarios en Facebook por Temas #DebateINE</a></li>
+                       <li> <a href="informe_3erdebateine_01.html#section-5">Visualización cartográfica de Tweets #DebateINEEducación.</a></li>
+                       <li> <a href="informe_3erdebateine_01.html#section-6">Visualización cartográfica de Tweets #DebateINE en el mundo.</a></li>
+                       <li> <a href="informe_3erdebateine_01.html#section-7">Postal de frecuencias absolutas de emojis en Tweets #DebateINE.</a></li>
+                     </ol>
+                   </nav>
+
+                   <a class='article-image-side-right' href='../informes/informes-images/images-3erdebateine/3erdebateine_foto-infografia_01.png'
+                       target='_blank'>
+                    <img src='../informes/informes-images/images-3erdebateine/3erdebateine_foto-infografia_01.png' />
+
+                    <!-- <p class='article-paragraph' id='article-paragraph-side'> El 31 de mayo de 2018, el Instituto Nacional Electoral (INE), lanzó una convocatoria para participar con preguntas, formuladas a los 4 candidatos a la Presidencia de la República, a través de Twitter y Facebook.
+                        El INE invitó al ITESO a colaborar en el registro, categorización y análisis de las preguntas ciudadanas, trabajo realizado por Signa_Lab ITESO, (Laboratorio de Innovación Tecnológica y de Estudios Interdisciplinarios Aplicados), en donde se realizan actividades de minería, procesamiento, visualización y análisis de datos.
+                    </p> -->
+                  </a>
+
+
+                 </div>
+
+                 <div class='article-image-caption-side-right'>
+                   <p>En esta infografía se muestra el procedimiento metodológico seguido por el Laboratorio.
+                   <br></p>
+                 </div>
+
+                 <div class='section-divider' id='section-1'>
+                 </div>
+             </section>
+
+
+
+             <section>
+                  <div class='article-subtitle'>
+                    <h3> 1. Treemap Temas #DebateINE</h3>
+                  </div>
+
+                 <p class='article-paragraph'> Entre el 31 de mayo y el 5 de junio, se produjeron un total de 11,538 tweets. <br> Este mapa muestra el porcentaje y de tweets por cada pregunta ciudadana y canalizadas a su respectivo hashtag: </p>
+
+                    <ul id='debate-ine-lista-temas'>
+                      <li> #DebateINEEconomía </li>
+                      <li> #DebateINEPobreza </li>
+                      <li> #DebateINEEducación </li>
+                      <li> #DebateINETecnología </li>
+                      <li> #DebateINESalud </li>
+                      <li> #DebateINESustentable </li>
+                      <li> #DebateINECambioClimático </li>
+                    </ul>
+
+                  <a class='article-image-med' href='../informes/informes-images/images-3erdebateine/3derdebateine_treemap_temas_01.png'
+                      target='_blank'> <img src='../informes/informes-images/images-3erdebateine/3derdebateine_treemap_temas_01.png'/> </a>
+
+                      <!--
+                  <div class="treemap">
+                    <svg width="960" height="540" xmlns="http://www.w3.org/2000/svg">
+                      <g transform="translate(.5,.5)">
+                        <g class="cell" transform="translate(0,164)">
+                          <rect width="221" height="182" style="fill: #EB019D; fill-opacity: 1; stroke: none;"></rect>
+                          <title>CambioClimatico: 7.77%</title>
+                          <text x="110.5" y="91" dy=".35em" text-anchor="middle" fill="rgb(244,244,244)">#CambioClimatico: 7.77%</text></g>
+                        <g class="cell" transform="translate(221,0)">
+                          <rect width="298" height="258" style="fill: #901C68; fill-opacity: 1; stroke: none;"></rect>
+                          <title>Economia: 14.84%</title><text x="149" y="129" dy=".35em" text-anchor="middle" fill="rgb(244,244,244)">#Economia: 14.84%</text></g>
+                        <g class="cell" transform="translate(716,0)">
+                          <rect width="244" height="540" style="fill: #F3B9DD; fill-opacity: 1; stroke: none;;"></rect>
+                          <title>Educacion: 25.40%</title>
+                          <text x="122" y="270" dy=".35em" text-anchor="middle" fill="rgb(244,244,244)">#Educacion: 25.40%</text></g>
+                        <g class="cell" transform="translate(221,258)">
+                          <rect width="298" height="282" style="fill: #76738C; fill-opacity: 1; stroke: none;;"></rect>
+                          <title>Pobreza: 16.22%</title>
+                          <text x="149" y="141" dy=".35em" text-anchor="middle" fill="rgb(244,244,244)">#Pobreza: 16.22%</text></g>
+                        <g class="cell" transform="translate(519,0)">
+                          <rect width="197" height="540" style="fill: #F571C3; fill-opacity: 1; stroke: none;;"></rect>
+                          <title>Salud: 20.55%</title>
+                          <text x="98.5" y="270" dy=".35em" text-anchor="middle" fill="rgb(244,244,244)">#Salud: 20.55%</text></g>
+                        <g class="cell" transform="translate(0,0)">
+                          <rect width="221" height="164" style="fill: #B388A3; fill-opacity: 1; stroke: none;;"></rect>
+                          <title>Sustentable: 6.99%</title>
+                          <text x="110.5" y="82" dy=".35em" text-anchor="middle" fill="rgb(244,244,244)">#Sustentable: 6.99%</text></g>
+                        <g class="cell" transform="translate(0,346)">
+                          <rect width="221" height="194" style="fill: #735869; fill-opacity: 1; stroke: none;"></rect>
+                          <title>Tecnologia: 8.24%</title>
+                          <text x="110.5" y="97" dy=".35em" text-anchor="middle" fill="rgb(244,244,244)">#Tecnologia: 8.24%</text></g>
+                        </g>
+                      </svg>
+                 </div>
+               -->
+
+                 <div class='article-graph-caption'>
+                   <p>Puede apreciarse que los dos temas con mayor frecuencia (que despertaron mayor interés), fueron #Educación con 25.40% de las preguntas y, #Salud, que concentró el 20.55%
+                  </p>
+                 </div>
+
+                 <div class='section-divider' id='section-2'> </div>
+             </section>
+
+             <section>
+                 <div class='article-subtitle'>
+                   <h3> 2. Grafos sobre la conversación #DebateINE en Twitter</h3>
+                 </div>
+
+                 <p class='article-paragraph'> <em>Metodología:</em> <br> El 6 de junio de 2018, Signa_Lab llevó a cabo las descargas de Tweets que respondieron a la convocatoria del INE para participar en el tercer debate presidencial. Los términos de búsqueda y el lapso de las descargas fueron:
+                 </p>
+
+                 <div class='article-table'>
+                     <table>
+                       <tr>
+                         <th> <em> Tema </em> </th>
+                         <th> <em> Horario de Descarga </em> </th>
+                         <th> <em> Tweets </em> </th>
+                       </tr>
+                       <tr>
+                         <td>#DebateINEEconomía</td>
+                         <td>11:51-10:52</td>
+                         <td>1,712</td>
+                       </tr>
+                       <tr>
+                         <td>#DebateINEPobreza</td>
+                         <td>11:03-11:04</td>
+                         <td>1,871</td>
+                       </tr>
+                       <tr>
+                         <td>#DebateINEEducación</td>
+                         <td>11:00-11:07</td>
+                         <td>2,931</td>
+                       </tr>
+                       <tr>
+                         <td>#DebateINETecnología</td>
+                         <td>10:56-10:57</td>
+                         <td>951</td>
+                       </tr>
+                       <tr>
+                         <td>#DebateINESalud</td>
+                         <td>10:56-10:57</td>
+                         <td>2.371</td>
+                       </tr>
+                       <tr>
+                         <td>#DebateINESustentable</td>
+                         <td>11:00-12:02</td>
+                         <td>806</td>
+                       </tr>
+                       <tr>
+                         <td>#DebateINECámbioClimático</td>
+                         <td>10:58-10:59</td>
+                         <td>896</td>
+                       </tr>
+                       <tr id='total-tweets'>
+                         <td colspan="3">TOTAL DE TWEETS: 11,538 Tweets</td>
+
+                       </tr>
+                     </table>
+
+                 </div>
+
+                 <!--
+                 <div class='article-paragraph-side'>
+                   <em>Herramienta de descarga:</em> <br> <br><p> <strong>THOTH 4.0.2</strong> (script desarrollado por Signa_Lab)
+                   <br>
+                   THOTH es un script desarrollado en Signa_Lab a partir de Tweepy (una librería de python para acceder a datos de Twitter). El script nos permite descargar información y generar 5 tipos de bases de datos:</p>
+
+                   <ul class='article-ul-side'>
+                     <li> Relaciones de usuarios a usuarios </li>
+                     <li> Relaciones de hashtags a hashtags </li>
+                     <li> Relaciones de usuarios a hashtags </li>
+                   </ul>
+
+                 </div>
+
+                   <div class='article-paragraph-side'> <em>Herramienta de análisis y visualización:</em> <br> <br> <p> <strong> Gephi.</strong>
+                     Gephi es una herramienta de software libre para la visualización de redes.</p>
+                   </div>
+
+                   <div class='article-paragraph-side'>
+                     <em>Datos que contienen los grafos:</em> <br> <br>
+                     Thoth es un script desarrollado en Signa_Lab a partir de Tweepy (una librería de python para acceder a datos de Twitter). El script nos permite descargar información y generar 5 tipos de bases de datos:</p>
+
+                     <ul class='article-ul-side'>
+                       <li> <em>Nodos:</em> Son los puntos dentro de un grafo, representan las unidades que están en relación dentro de la red (usuarios, hashtags, tweets). Su tamaño está en función del número de conexiones con otros nodos. </li>
+                       <li> <em>Aristas:</em> Son las líneas dentro de un grafo, representan las relaciones entre los nodos. Su tamaño está en función del número de veces que un nodo interactúa con otro. </li>
+                       <li> <em>Comunidades:</em> Se generan cuando dos o más nodos interactúan entre sí. Están representadas por los colores de aristas y de nodos dentro de la red. </li>
+                     </ul>
+
+                   </div>
+
+
+                  <div class='article-paragraph-side'>
+                    <em>Tipos de grafos:</em> <br>
+
+                    <ul class='article-ul-side'>
+                      <li> <em>Hashtag-Hashtag (Ht2Ht): </em>  Muestra el sentido semántico general de la discusión. Permite identificar niveles de fortaleza en las relaciones entre hashtags a partir del grosor de las aristas con que éstos se vinculan. </li>
+                      <li> <em>Usuario-Hashtag (U2Ht): </em> Muestra la tracción que tiene entre usuarios un conjunto de etiquetas o hashtags.
+                         Permite identificar la centralidad de los hashtags, es decir, la importancia de lo que condensan éstos como palabras, frases o lemas, a partir del tamaño de las nubes de usuarios alrededor de cada etiqueta.</li>
+                      <li> <em>Usuario-Usuario (U2U)</em> uestra módulos o comunidades de usuarios (por colores) interactuando dentro de una red.
+                        Permite identificar tensiones entre actores, grupos de disputa por el sentido de un tema o coyuntura, y volumen de usuarios alrededor de una discusión.</li>
+                    </ul>
+
+                  </div>
+                -->
+
+
+
+                 <p class='article-graph-title'> <em> #DebateINE Temas ht2ht</em>
+                 </p>
+
+                 <p class='article-paragraph'> En este grafo se aprecian 315 nodos que representan los hashtags asociados a los temas propuestos para el debate y una interacción de baja densidad entre ellos, lo que da una idea de la dispersión temática. Es posible reconocer 12 comunidades utilizando estos hashtags.
+                 </p>
+
+                 <ul class='article-ul'>
+                   <li> <em>Nodos:</em> 315 </li>
+                   <li> <em>Aristas:</em> 965 </li>
+                 </ul>
+
+                 <a class='article-image-med' href='../informes/informes-images/images-3erdebateine/3erdebateine_grafo_DebateINETemas_Ht2Ht.png'
+                     target='_blank'> <img src='../informes/informes-images/images-3erdebateine/3erdebateine_grafo_DebateINETemas_Ht2Ht.png'/> </a>
+
+                 <div class='article-image-caption'>
+                   <p>Visualización de la conversación en Twitter alrededor de los Temas #DebateINE de hashtag a hashtag.</p>
+                 </div>
+
+
+
+                 <p class='article-graph-title'> <em> Conversación general #DebateINE u2ht</em>
+                 </p>
+
+                 <p class='article-paragraph'> En este grafo se muestra la relación entre las/os usuarios que participaron en la convocatoria #DebateINE con preguntas a los candidatos. Se trata de una red bastante densa con fuertes interacciones con los temas propuestos en relación a los candidatos; se detectaron 14 comunidades.
+                 </p>
+
+                 <ul class='article-ul'>
+                   <li> <em>Nodos:</em> 3,538 </li>
+                   <li> <em>Aristas:</em> 6,219 </li>
+                 </ul>
+
+                 <a class='article-image-med' href='informes_gephi-interactive/informe_3erdebateine_interactive/index.html'
+                     target='_blank'> <img src='../informes/informes-images/images-3erdebateine/3erdebateine_grafo_DebateINE_General_U2Ht.png'/> </a>
+
+                 <div class='article-image-caption'>
+                   <p>Visualización de la conversación general Twitter alrededor del #DebateINE de usuario a hashtag. Ingresa a la <a href='informes_gephi-interactive/informe_3erdebateine_interactive/index.html'
+                     target='_blank'> versión interactiva </a>.</p>
+                 </div>
+
+
+
+
+                 <p class='article-graph-title'> <em> #DebateINE Temas u2u</em>
+                 </p>
+
+                 <p class='article-paragraph'> Se trata de una visualización que muestra la relación e interacciones entre usuarios alrededor de los hashtags del #DebateINE que evidencia la densidad con la que fueron arrobados los cuatro candidatos, agrupados en un total de 61 comunidades.
+                 </p>
+
+                 <ul class='article-ul'>
+                   <li> <em>Nodos:</em> 5,217 </li>
+                   <li> <em>Aristas:</em> 13,782 </li>
+                 </ul>
+
+                 <a class='article-image-med' href='../informes/informes-images/images-3erdebateine/3erdebateine_grafo_DebateINETemas_U2U.png'
+                     target='_blank'> <img src='../informes/informes-images/images-3erdebateine/3erdebateine_grafo_DebateINETemas_U2U.png'/> </a>
+
+                 <div class='article-image-caption'>
+                   <p>Visualización de la conversación en Twitter alrededor de los Temas #DebateINE de usuario a usuario.</p>
+                 </div>
+
+                 <div class='section-divider' id='section-3'> </div>
+
+             </section>
+
+             <section>
+                 <div class='article-subtitle'>
+                   <h3> 3. Visualizaciones Interactivas de Tweets por Temas #DebateINE</h3>
+                 </div>
+
+                 <p class='article-paragraph'> Tableau es una plataforma de uso gratuito que permite generar visualizaciones interactivas de bases de datos que hemos generado previamente con Thoth, el script de minería de datos de Twitter, desarrollada por Signa_Lab.
+                 </p>
+
+                 <p class='article-paragraph'> Thoth nos permite generar otra base de datos que contiene información agregada sobre las interacciones de usuarios en Twitter. Esta base de metadatos ofrece los tweets completos, con fecha de publicación, nombre de usuari@, número de retweets y de favoritos.
+                 </p>
+
+                 <p class='article-paragraph'> A continuación se presentan un conjunto de visualizaciones interactivas sobre la incidencia de cada tweet en la conversación sobre cada uno de los temas propuestos por el INE para el debate.
+                 </p>
+
+                 <ul class='article-ul'>
+                   <li> Las visualizaciones con título “#DebateINE” muestran todos los tweets que contienen esa etiqueta en específico, categorizados por número de favoritos y de retweets. </li>
+                   <li> Las visualizaciones con título “TOP 50 #DebateINE…” muestran los 50 tweets con más retweets de cada uno de los hashtags del debate. </li>
+                 </ul>
+
+                 <p class='article-paragraph'> De los TOP 50, además, se incluyen 4 preguntas de cada tema (7 subcarpetas), una para cada candidato, con el fin de que los moderadores del debate puedan seleccionar aquellas que abran el primer segmento de cada bloque. Estas 16 preguntas fueron filtradas a partir de criterios de pertinencia del abordaje y nivel de apoyo (retweets) a cada una, sin embargo, los moderadores pueden consultar los archivos de arriba, de cada tema, para buscar otras interrogantes para cada candidato.
+                 </p>
+
+               </section>
+
+
+                 <p class='article-graph-title'> <em> TOP 50 Tweets Temas #DebateINE</em>
+                 </p>
+
+
+                 <div style='height:100px;'></div>
+
+
+                 <div class='tableauPlaceholder' id='viz1529534579571' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINESalud&#47;TOP50DebateINESalud&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TOP50DebateINESalud&#47;TOP50DebateINESalud' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINESalud&#47;TOP50DebateINESalud&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='publish=yes' /></object></div>
+                 <script type='text/javascript'>
+                 var divElement = document.getElementById('viz1529534579571');
+                 var vizElement = divElement.getElementsByTagName('object')[0];
+                 vizElement.style.minWidth='420px';
+                 vizElement.style.maxWidth='650px';
+                 vizElement.style.width='100%';
+                 vizElement.style.minHeight='587px';
+                 vizElement.style.maxHeight='887px';
+                 vizElement.style.height=(divElement.offsetWidth*10)+'px';
+                 var scriptElement = document.createElement('script');
+                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
+               </script>
+
+               <div class='article-graph-caption'>
+                 <p>TOP50 #DebateINESalud.</p>
+               </div>
+
+
+
+
+               <div class='tableauPlaceholder' id='viz1529535203439' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='TOP 50 #DebateINETecnología' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINETecnologa&#47;TOP50DebateINETecnologa&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TOP50DebateINETecnologa&#47;TOP50DebateINETecnologa' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINETecnologa&#47;TOP50DebateINETecnologa&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='publish=yes' /></object></div>
+               <script type='text/javascript'>
+                var divElement = document.getElementById('viz1529535203439');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.minWidth='420px';
+                vizElement.style.maxWidth='650px';vizElement.style.width='100%';
+                vizElement.style.minHeight='587px';
+                vizElement.style.maxHeight='887px';
+                vizElement.style.height=(divElement.offsetWidth*10)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+
+              <div class='article-graph-caption'>
+                <p>TOP50 #DebateINETecnología.</p>
+              </div>
+
+
+
+              <div class='tableauPlaceholder' id='viz1529535952946' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINESustentable&#47;TOP50DebateINESustentable&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TOP50DebateINESustentable&#47;TOP50DebateINESustentable' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINESustentable&#47;TOP50DebateINESustentable&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1529535952946');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>TOP50 #DebateINESustentable.</p>
+              </div>
+
+
+              <div class='tableauPlaceholder' id='viz1529536073202' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINEPobreza&#47;TOP50DebateiNEPobreza&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TOP50DebateINEPobreza&#47;TOP50DebateiNEPobreza' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINEPobreza&#47;TOP50DebateiNEPobreza&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1529536073202');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+
+              <div class='article-graph-caption'>
+                <p>TOP50 #DebateINEPobreza.</p>
+              </div>
+
+
+              <div class='tableauPlaceholder' id='viz1529536370083' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='TOP 50 #DebateINEEducación ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINEEduacin&#47;TOP50DebateINEEducacin&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TOP50DebateINEEduacin&#47;TOP50DebateINEEducacin' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINEEduacin&#47;TOP50DebateINEEducacin&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1529536370083');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+
+
+              <div class='article-graph-caption'>
+                <p>TOP50 #DebateINEEducación.</p>
+              </div>
+
+
+              <div class='tableauPlaceholder' id='viz1529536467246' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='TOP 50 #DebateINEEconomía ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINEEconoma&#47;TOP50DebateINEEconoma&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TOP50DebateINEEconoma&#47;TOP50DebateINEEconoma' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINEEconoma&#47;TOP50DebateINEEconoma&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1529536467246');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+
+              <div class='article-graph-caption'>
+                <p>TOP50 #DebateINEEconomia.</p>
+              </div>
+
+
+              <div class='tableauPlaceholder' id='viz1529536652721' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='TOP 50 #DebateINECambioClimático ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINECambioClimtico&#47;TOP50DebateINECambioClimtico&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TOP50DebateINECambioClimtico&#47;TOP50DebateINECambioClimtico' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TO&#47;TOP50DebateINECambioClimtico&#47;TOP50DebateINECambioClimtico&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1529536652721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+
+
+              <div class='article-graph-caption'>
+                <p>TOP50 #DebateINECambioClimático.</p>
+              </div>
+
+              <div class='section-divider' id='section-4'> </div>
+
+
+          <section>
+              <div class='article-subtitle'>
+                <h3>4. Visualizaciones interactivas de comentarios en Facebook por Temas #DebateINE</h3>
+              </div>
+          </section>
+
+              <p class='article-paragraph'> A través de Netvizz, una herramienta de minería de datos para Facebook, Signa_Lab obtuvo la información de las reacciones a las publicaciones de los perfiles de los cuatro candidatos a la presidencia durante los días 31 de mayo al 5 de junio, así como los “me gusta” a cada uno de los comentarios hechos a esas publicaciones durante ese periodo. Las bases de datos fueron procesadas por el laboratorio y visualizadas en Tableau, para mostrar las respuestas afectivas hacia cada candidato y los principales hilos de conversación construidos por los usuarios de dicha red en esas páginas.
+              </p>
+
+              <div class='tableauPlaceholder' id='viz1530046955204' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='Reacciones en publicaciones de Facebook de Andrés Manuel López Obrador. 31 de mayo al 5 de junio ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7M&#47;7MCKCGHTH&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;7MCKCGHTH' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;7M&#47;7MCKCGHTH&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1530046955204');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>Reacciones a publicaciones de AMLO en Facebook del 31 mayo al 5 junio</p>
+              </div>
+
+              <div class='tableauPlaceholder' id='viz1530047230391' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='Reacciones en publicaciones de Facebook  de Ricardo Anaya. 31 de mayo al 5 de junio ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReaccionespublicacionesAnaya_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeRicardoAnaya_31demayoal5dejunio&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ReaccionespublicacionesAnaya_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeRicardoAnaya_31demayoal5dejunio' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReaccionespublicacionesAnaya_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeRicardoAnaya_31demayoal5dejunio&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1530047230391');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>Reacciones en publicaciones en Facebook de Ricardo Anaya. 31 de mayo al 5 de junio</p>
+              </div>
+
+              <div class='tableauPlaceholder' id='viz1530047336155' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReaccionespublicacionesMeade_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeJosA_Meade_31demayoal5dejunio&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ReaccionespublicacionesMeade_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeJosA_Meade_31demayoal5dejunio' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReaccionespublicacionesMeade_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeJosA_Meade_31demayoal5dejunio&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1530047336155');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>Reacciones en publicaciones en Facebook de José A. Meade. 31 de mayo al 5 de junio</p>
+              </div>
+
+              <div class='tableauPlaceholder' id='viz1530047433072' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReaccionespublicacionesRodrguez_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeJaimeRodrguez_31demayoal5dejunio&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ReaccionespublicacionesRodrguez_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeJaimeRodrguez_31demayoal5dejunio' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReaccionespublicacionesRodrguez_31mayo-5junio&#47;ReaccionesenpublicacionesdeFacebookdeJaimeRodrguez_31demayoal5dejunio&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1530047433072');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>Reacciones en publicaciones en Facebook de Jaime Rodríguez. 31 de mayo al 5 de junio</p>
+              </div>
+
+              <div class='tableauPlaceholder' id='viz1530047642283' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='Publicaciones Andrés Manuel López Obrador. 31 de mayo al 5 de junio ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pg&#47;PginaOficialAndrsManuelLpezObrador_31demayoal5dejunio&#47;PublicacionesAndrsManuelLpezObrador_31demayoal5dejunio&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PginaOficialAndrsManuelLpezObrador_31demayoal5dejunio&#47;PublicacionesAndrsManuelLpezObrador_31demayoal5dejunio' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pg&#47;PginaOficialAndrsManuelLpezObrador_31demayoal5dejunio&#47;PublicacionesAndrsManuelLpezObrador_31demayoal5dejunio&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1530047642283');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>Publicaciones Andrés Manuel López Obrador. 31 de mayo al 5 de junio</p>
+              </div>
+
+              <div class='tableauPlaceholder' id='viz1530047834871' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='Publicaciones de Ricardo Anaya. 31 de mayo al 5 de junio ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XH&#47;XHQ9YP95F&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;XHQ9YP95F' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;XH&#47;XHQ9YP95F&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1530047834871');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+              <div class='article-graph-caption'>
+                <p>Publicaciones de Ricardo Anaya. 31 de mayo al 5 de junio</p>
+              </div>
+
+              <div class='tableauPlaceholder' id='viz1530047919962' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='Publicaciones de José Antonio Meade en Facebook. 31 de mayo al 5 de junio ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pg&#47;PginaOficialJosAntonioMeade_31demayoal5dejunio&#47;PublicacionesdeJosAntonioMeadeenFacebook_31demayoal5dejunio&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PginaOficialJosAntonioMeade_31demayoal5dejunio&#47;PublicacionesdeJosAntonioMeadeenFacebook_31demayoal5dejunio' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pg&#47;PginaOficialJosAntonioMeade_31demayoal5dejunio&#47;PublicacionesdeJosAntonioMeadeenFacebook_31demayoal5dejunio&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1530047919962');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>Publicaciones de José Antonio Meade en Facebook. 31 de mayo al 5 de junio</p>
+              </div>
+
+              <div class='tableauPlaceholder' id='viz1530048064116' style='position: relative; padding-left: 2rem; padding-right: 2rem;'><noscript><a href='#'><img alt='Publicaciones de Jaime Rodríguez. 31 de mayo al 5 de junio  ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pg&#47;PginaOficialJaimeRodrguez_31demayoal5dejunio&#47;PublicacionesdeJaimeRodrguez_31demayoal5dejunio&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PginaOficialJaimeRodrguez_31demayoal5dejunio&#47;PublicacionesdeJaimeRodrguez_31demayoal5dejunio' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pg&#47;PginaOficialJaimeRodrguez_31demayoal5dejunio&#47;PublicacionesdeJaimeRodrguez_31demayoal5dejunio&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1530048064116');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*10)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+              <div class='article-graph-caption'>
+                <p>Publicaciones de Jaime Rodríguez. 31 de mayo al 5 de junio</p>
+              </div>
+
+              <div class='section-divider' id='section-5'>
+              </div>
+
+
+          <section>
+                <div class='article-subtitle'>
+                  <h3> 5. Visualización cartográfica de Tweets #DebateINEEducación.</h3>
+                </div>
+
+                <p class='article-paragraph'>
+                  En este mapa aparecen geolocalizados los tuits emitidos sobre el eje de educación en la consulta que realizó el INE para el tercer debate presidencial Son tuits correspondientes a la semana del 31 de mayo al 5 de junio.
+                  <br> <br>
+                  Para lograr geolocalizar los tuits se usó una API de google que asigna latitud y longitud en función del texto que los usuarios definen como su ubicación en sus cuentas. En cuanto a la parte de visualización de los datos en el mapa así como en el trabajo de correspondencia entre la base de datos y la visualización, se usó un script propio desarrollado en el laboratorio llamado Skyplotter.
+                  <br> <br>
+                  Es significativo observar dos rasgos en este mapa. Por un lado el ver cómo la discusión acerca de las preguntas sobre educación se extiende a buena parte de votantes o personas residentes en Estados Unidos. Por otro, constatar como uno de los tuits más compartidos corresponde a una cuenta de un profesor universitario. Que sin ser una figura mediática, asociación civil o colectivo, logra sin embargo colocar una pregunta que se retuiteó 1300 veces y a la que más de dos mil personas le dieron like. Eso sirvió para que fuera una de las preguntas seleccionadas para formular a los candidatos y en el mapa se puede observar cómo esa pregunta viaja a distancias muy alejadas de donde se originó inicialmente.
+                  <br>
+                </p>
+
+                <div class="folium-map" id="map_f0de59b20e324688b3c1029cd34198b9" style="width: 100%; height: 500px; z-index: 0;"></div>
+
+                <script src="../informes/informes_twitter-mapas/tweetsedu-black.js"></script>
+
+                <div class='youtube-embed-caption'>
+                  <p>Esto es una descripción del mapa.</p>
+                </div>
+
+              <div class='section-divider' id='section-6'>
+              </div>
+          </section>
+
+          <section>
+              <div class='article-subtitle'>
+                <h3> 6. Visualización cartográfica de Tweets #DebateINE en el mundo.</h3>
+              </div>
+
+                <div class='youtube-embed-med'>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/iqHDAY4h_LI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+
+                <div class='youtube-embed-caption'>
+                  <p>Esto es una descripción de imagen.</p>
+                </div>
+
+                <p class='article-paragraph'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+          </section>
+
+          <div class='section-divider' id='section-7'>
+          </div>
+
+          <section>
+              <div class='article-subtitle'>
+                <h3> 7. Postal de frecuencias absolutas de emojis en Tweets #DebateINE.</h3>
+              </div>
+
+              <a class='article-image-med' href='../informes/informes-images/images-3erdebateine/3erdebateine_emojis.jpg'
+                  target='_blank'> <img src='../informes/informes-images/images-3erdebateine/3erdebateine_emojis.jpg'/> </a>
+             <div class='article-image-caption'>
+                <p>Fuente: INE.</p>
+             </div>
+
+             <div class='section-divider' id='section-8'>
+             </div>
+
+          </section>
+
+          <section>
+              <div class='article-subtitle'>
+                <h3> 8. Visualización interactiva de imágenes más populares en Instagram hablando sobre cada candidato durante #DebateINE.</h3>
+              </div>
+
+              <p class='article-paragraph'>
+                A partir de la descarga de fotografías en instagram asociadas a los nombres de cada candidato, se distribuyeron las mismas en función de cuántos likes recibieron. La visualización que se ofrece a continuación muestra…
+              </p>
+
+              <a class='article-image-med' href='informes_gephi-interactive/informe_3erdebateine_interactive/index.html'
+                  target='_blank'> <img src='../informes/informes-images/images-3erdebateine/3erdebateine_grafo_DebateINE_General_U2Ht.png'/> </a>
+
+              <div class='article-image-caption'>
+                <p>Visualización de la conversación general Twitter alrededor del #DebateINE de usuario a hashtag. Ingresa a la <a href='informes_gephi-interactive/informe_3erdebateine_interactive/index.html'
+                  target='_blank'> versión interactiva </a>.</p>
+              </div>
+
+
+
+          </section>
+
+
+          </div>
+      </article>
+
+
+      <footer class='footer'>
+        <div class='hide_mobile'>
+          <address> <a href="https://iteso.mx/" class="direccion">Instituto Tecnológico y de Estudios Superiores de Occidente </a>
+            Periférico Sur Manuel Gómez Morín #8585
+            C.P. 45604 Tlaquepaque, Jalisco, México
+            Phone: (33) 3669 3434 </address>
+        </div>
+
+        <nav class = social-icons>
+          <a href="https://www.facebook.com/SignaLab/" class="fa fa-facebook" target="_blank"></a>
+          <a href="https://twitter.com/Signa_Lab" class="fa fa-twitter" target="_blank"></a>
+          <a href="https://www.instagram.com/signa_lab/" class="fa fa-instagram" target="_blank"></a>
+          <a href="https://github.com/signalab" class="fa fa-github" target="_blank"></a>
+          <a href="https://www.youtube.com/channel/UCgIWX8HXCMM_akAgW1zNmWg" class="fa fa-youtube" target="_blank"></a>
+        </nav>
+      </footer>
+
+    </div>
+
+  </body>
+</html>

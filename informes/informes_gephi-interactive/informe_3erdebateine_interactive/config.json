@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "../../../images/signa_identity/logo_signa_iteso_60-black-250px.png",
+    "link": "../../../images/signa_identity/logo_signa_iteso_60-black-250px.png",
+    "text": "Signa_Lab"
+  },
+  "text": {
+    "more": "Descripción de grafo.",
+    "intro": "Esto es un grafo.",
+    "title": "#DebateINE_U2HT"
+  },
+  "leyenda": {
+    "edgeLabel": "Interacciones",
+    "colorLabel": "Grados de relación",
+    "nodeLabel": "Usuarios y hashtags alrededor de #DebateINE"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": false,
+    "hoverBehavior": "default"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": true,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 10,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
